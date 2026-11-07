@@ -184,5 +184,13 @@
     "No iPhone live-input, latency, heat or final VLM evaluation",
     "Candidate leakage is an upper bound at the native/score gate before ambiguous-candidate delivery count checks",
     "Feature vectors re-extracted on macOS with the released FP16 model and PIL-compatible production preprocessing"
+  ],
+  "developmentSourceNames": [
+    "ElucidatorModels-core50-development",
+    "ElucidatorModels-caltech-development"
+  ],
+  "holdoutSourceNames": [
+    "ElucidatorModels-core50-final",
+    "ElucidatorModels-caltech-final"
   ]
 }

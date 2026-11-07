@@ -154,7 +154,8 @@ def main():
             candidates.append(((utility, -e['unknownSingleFalseAcceptRate'], e['correctSingleAcceptRate'], -maximum), float(maximum)))
         limits.append(max(candidates)[1])
     report = dict(version=2, modelRevision='75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2',
-                  metric='squared-l2-unit-embedding', referenceImagesPerClass=10, ridgeRegularization=1,
+                  metric='squared-l2-unit-embedding', developmentSourceNames=[pathlib.Path(f).stem for f in a.development],
+                  holdoutSourceNames=[pathlib.Path(f).stem for f in a.holdout], referenceImagesPerClass=10, ridgeRegularization=1,
                   maximumDistances=limits, competitionMarginMultiplier=margin/.1,
                   selectionObjective='Correct known single acceptance minus unknown single acceptance and 0.25 * unknown candidate leakage; margin selected at equal error cost; distance penalties 8/4/2/1/0.5 (user-selected standard cost 2)',
                   sourcePartitions=[dict(galleryImages=sum(r['split']=='gallery' for r in rows),knownCalibrationImages=sum(r['split']=='validation' for r in rows),knownCheckImages=sum(r['split']=='test' for r in rows),unknownImages=sum(r['split']=='unknown' for r in rows)) for rows in development],

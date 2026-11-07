@@ -1,0 +1,5 @@
+*.mlpackage/
+*.bin
+encoder-manifest.json
+encoder-model.mlmodel
+__pycache__/

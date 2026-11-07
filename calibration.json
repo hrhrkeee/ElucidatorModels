@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "metric": "squared-l2-unit-embedding",
+  "galleryImages": 360,
+  "knownCalibrationImages": 80,
+  "unknownDevelopmentImages": 90,
+  "maximumDistances": [
+    0.1962472396007928,
+    0.1962472396007928,
+    0.1962472396007928,
+    0.2191739384057869,
+    0.22420208286267693
+  ],
+  "knownNearestCorrect": 0.825,
+  "knownPassingGate": [
+    0.0375,
+    0.0375,
+    0.0375,
+    0.1125,
+    0.1125
+  ],
+  "unknownPassingGate": [
+    0.0,
+    0.0,
+    0.0,
+    0.022222222222222223,
+    0.044444444444444446
+  ],
+  "limitations": [
+    "Previously observed public dataset features reused for development",
+    "Native distance gates only; not final Ridge/VLM acceptance or independent quality validation",
+    "No iPhone performance measurement"
+  ]
+}

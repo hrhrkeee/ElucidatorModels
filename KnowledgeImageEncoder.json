@@ -1,0 +1,17 @@
+{
+  "model": "google/siglip2-base-patch16-224",
+  "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "license": "Apache-2.0",
+  "imageTowerParameters": 92884224,
+  "packageBytes": 184741378,
+  "maximumAbsoluteConversionError": 0.0006226147525012493,
+  "macWarmP95Milliseconds": 4.854062048252672,
+  "torch": "2.7.1",
+  "numpy": "2.2.6",
+  "coremltools": "9.0",
+  "limitations": [
+    "Mac warm inference, not iPhone end-to-end latency",
+    "Random input conversion check; task accuracy requires image-level re-evaluation",
+    "Image tower only; optional download; no text encoder"
+  ]
+}

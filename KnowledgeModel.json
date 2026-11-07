@@ -1,0 +1,27 @@
+{
+  "id": "google-image-base-224-fp16-v1",
+  "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "preprocessingVersion": 1,
+  "releaseURL": "https://github.com/hrhrkeee/ElucidatorModels/releases/download/knowledge-image-v1",
+  "files": [
+    {
+      "path": "Manifest.json",
+      "asset": "encoder-manifest.json",
+      "bytes": 617,
+      "sha256": "be155dc0f803226bd14bf2fc65ea0cf7d9cc409f765777bfdab9796f41d483dd"
+    },
+    {
+      "path": "Data/com.apple.CoreML/model.mlmodel",
+      "asset": "encoder-model.mlmodel",
+      "bytes": 140121,
+      "sha256": "497ab148a384e8056c433708e65e77506b2ba5aac6d73c14163fd6bc310c0698"
+    },
+    {
+      "path": "Data/com.apple.CoreML/weights/weight.bin",
+      "asset": "encoder-weight.bin",
+      "bytes": 184600640,
+      "sha256": "3bec6f05f9ee51d1285ed0b97aa0fde6e912bdf4eb308f17ba3bb00f1824a0ac"
+    }
+  ],
+  "retiredModelIDs": []
+}

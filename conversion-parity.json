@@ -1,0 +1,8 @@
+{
+  "imageCount": 6,
+  "minimumEmbeddingCosine": 0.9994603395462036,
+  "meanEmbeddingCosine": 0.9996472001075745,
+  "maximumAbsoluteError": 0.0050088767893612385,
+  "nearestOtherImageAgreement": 1.0,
+  "scope": "Conversion parity on real images, not independent retrieval quality or iPhone performance"
+}

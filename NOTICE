@@ -1,0 +1,7 @@
+SigLIP 2 Base image encoder
+Original model: Google, google/siglip2-base-patch16-224
+Source revision: 75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2
+Source: https://huggingface.co/google/siglip2-base-patch16-224
+License: Apache License 2.0 (see LICENSE)
+Modifications: extracted image tower, L2-normalized output, converted to Core ML FP16 by Elucidator. No fine tuning.
+Conversion tools: PyTorch, Hugging Face Transformers, Apple coremltools. These tools are not bundled in the model.

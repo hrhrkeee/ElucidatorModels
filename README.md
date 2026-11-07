@@ -17,6 +17,10 @@ uv run --python 3.12 --with torch==2.7.1 --with transformers==4.57.1 --with pill
 uv run --python 3.12 --with torch==2.7.1 --with transformers==4.57.1 --with pillow --with numpy==2.2.6 --with torchvision==0.22.1 --with coremltools==9.0 python verify.py --model KnowledgeImageEncoder.mlpackage --images image1.jpg image2.jpg --output conversion-parity.json
 ```
 
-Verification requires macOS/Core ML. The included report compares six development product photographs; it verifies conversion, not independent retrieval quality, unknown-object rejection, or iPhone performance. The calibration report is exploratory and reuses existing development features. Its strict rejection gates also reject many known queries; do not interpret them as a quality certification.
+Verification requires macOS/Core ML. The included report compares six development product photographs; it verifies conversion, not independent retrieval quality, unknown-object rejection, or iPhone performance. The calibration report is exploratory and reuses existing development features. The selected intermediate standard trades known-correct acceptance against unknown false acceptance. On previously observed development check partitions it yields 67.18% known-correct single acceptance and 8.33% unknown single false acceptance, averaged equally across datasets and inventory sizes. These are not product guarantees, and the harder previously observed CORe50 partition still has 15.56% unknown single false acceptance. See the complete report; do not interpret it as a quality certification.
+
+Swift production preprocessing was also checked against the official reference on six real images (minimum embedding cosine 0.99858). See `swift-preprocessing-parity.json`.
+
+`extract.py` re-extracts local manifest images using the released model. `calibrate.py` selects native embedding distance gates and the model-relative competition margin using only development calibration partitions, with one-class Prototype and multi-class Ridge. Raw images and individual embeddings are not published. The current calibration uses 3,605 re-extracted original images across development and previously observed check cohorts.
 
 See `NOTICE`, `LICENSE`, `conversion-parity.json`, and `calibration.json`. Model downloads run locally; no image upload or hosted inference is required.
